@@ -1,0 +1,32 @@
+.navbar-default {
+    background-color: #F18C89;
+    border-color: #e7e7e7;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #F18C89;
+}
+
+
+.navbar-nav>.active>.custome_rectangle{
+    border-right: solid 1px #E2E2E8;
+    height:30px;
+    width:50px;
+    margin-top: 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FBEFEF;
+}
+
+.carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+}
+
+.carousel-inner>.item>img{
+    height: 500px;
+}
+

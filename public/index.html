@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/component.css" rel="stylesheet" type="text/css"/>
+    <link href="../bootstrap/css/widget.css" rel="stylesheet" type="text/css"/>
+    <link href="../bootstrap/css/custome_nav_bar.css" rel="stylesheet" type="text/css"/>
+    <link href="../bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/custome_widget_1.js"></script>
+    <script src="../bootstrap/js/moment.min.js"></script>
+    <script src="../bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+
+</head>
+<body>
+
+<script language=JavaScript>
+
+    var about;
+    function mOver(p) {
+
+        if (p == 1) {
+            about = document.getElementById("sign_in").style.backgroundColor = '#775A5A';
+            console.info("mover");
+        } else if (p == 2) {
+            about = document.getElementById("login_in").style.backgroundColor = '#775A5A';
+        }
+
+    }
+
+    function mOut() {
+
+        document.getElementById("login_in").style.backgroundColor = "";
+        document.getElementById("sign_in").style.backgroundColor = "";
+    }
+
+    $('.carousel').carousel({
+        interval: 3000
+    })
+
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+
+</script>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <div class="custome_rectangle">
+
+                        <a href="#"><img alt="Brand" src="../bootstrap/img/main_page_nav_bar_facebook.png"
+                                         height="30" width="30"></a>
+                    </div>
+
+                </li>
+
+                <li><a href="#">photos</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">pixel</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="container">
+                        <form class="searchbox">
+                            <input type="search" placeholder="Search......" name="search" class="searchbox-input"
+                                   onkeyup="buttonUp();" required>
+                            <input type="submit" class="searchbox-submit" value="GO">
+                            <span class="searchbox-icon"><img src="../bootstrap/img/main_page_nav_bar_search.png"
+                                                              style="width: 30px;height: 30px;"/></span>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                <li id="sign_in"><a href="twitter_pt1.php" onMouseOver=mOver(1) onMouseOut=mOut()>Twitter</a></li>
+                <li id="login_in"><a href="#" onMouseOver=mOver(2) onMouseOut=mOut()>Namespace</a></li>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<div class="main-main-presentation-div">
+    <ul class="nav nav-pills">
+        <li role="presentation"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">ABOUT US</a></li>
+        <li role="presentation"><a href="#">LOOK BOOK</a></li>
+        <li role="presentation"><img src=".." style="width: 200px;height: 100px;"/></li>
+        <li role="presentation"><a href="#">FEATURES</a></li>
+        <li role="presentation"><a href="#">PRICING</a></li>
+        <li role="presentation"><a href="#">LOVE STORIES</a></li>
+    </ul>
+</div>
+
+<div class="main-main-carousel-div">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="http://placehold.it/1500x415" alt="...">
+
+                <div class="carousel-caption">
+                    <h3>Caption Text</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1500x415" alt="...">
+
+                <div class="carousel-caption">
+                    <h3>Caption Text</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1500x415" alt="...">
+
+                <div class="carousel-caption">
+                    <h3>Caption Text</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-text hidden-xs">
+            <div class="col-md-12 text-center">
+                <h1>
+                    Create your wedding website</h1>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail2"
+                               placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-clear btn-sm btn-min-block">Try it free</button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <!-- Carousel -->
+</div>
+
+<div class="main-main-learn-div">
+    <div class="main-main-learn-div-top">
+        <div class="col-sm-4">
+            <div class="photo-wrapper">
+                <div class="photo">
+                    <a class="fancybox" href="assets/img/portfolio/port06.jpg"><img class="img-responsive"
+                                                                                    src="http://placehold.it/500x500"
+                                                                                    alt=""></a>
+                </div>
+            </div>
+            <div class="txt-wrapper">
+                Lorem ipsum dolor sit amet, vidit alienum copiosae usu cu. Per ei dolorum veritus dignissim. Per unum
+                constituam ei, nec commodo ancillae constituto an. Sea docendi volutpat democritum ei. Legere aperiri
+                nec
+                te, sea ex noluisse singulis accusamus. Eos no lorem labitur, ut aperiri conceptam voluptatum vel.
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="photo-wrapper">
+                <div class="photo">
+                    <a class="fancybox" href="assets/img/portfolio/port06.jpg"><img class="img-responsive"
+                                                                                    src="http://placehold.it/500x500"
+                                                                                    alt=""></a>
+                </div>
+            </div>
+            <div class="txt-wrapper">
+                Lorem ipsum dolor sit amet, vidit alienum copiosae usu cu. Per ei dolorum veritus dignissim. Per unum
+                constituam
+                ei, nec commodo ancillae constituto an. Sea docendi volutpat democritum ei. Legere aperiri nec te, sea
+                ex
+                noluisse singulis accusamus. Eos no lorem labitur, ut aperiri conceptam voluptatum vel.
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="photo-wrapper">
+                <div class="photo">
+                    <a class="fancybox" href="assets/img/portfolio/port06.jpg"><img class="img-responsive"
+                                                                                    src="http://placehold.it/500x500"
+                                                                                    alt=""></a>
+                </div>
+            </div>
+            <div class="txt-wrapper">
+                Lorem ipsum dolor sit amet, vidit alienum copiosae usu cu. Per ei dolorum veritus dignissim. Per unum
+                constituam
+                ei, nec commodo ancillae constituto an. Sea docendi volutpat democritum ei. Legere aperiri nec te, sea
+                ex
+                noluisse singulis accusamus. Eos no lorem labitur, ut aperiri conceptam voluptatum vel.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-main-learn-div-bottom">
+        <button type="button" class="btn btn-primary btn-lg btn-block">
+            Block level Primary button
+        </button>
+    </div>
+</div>
+
+</div>
+
+<div class="main-main-lookbook-div">
+
+    <div class="col-sm-3">
+        <div class="margin-center-photo">
+            <div class="photo">
+                <a class="fancybox" href="assets/img/portfolio/port06.jpg"><img class="img-responsive"
+                                                                                src="http://placehold.it/300x400"
+                                                                                alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="margin-center-photo">
+            <div class="margin-center-inner-photo">
+                <button type="button" class="btn btn-primary btn-lg btn-block">
+                    Launch Site
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="margin-center-photo-6">
+
+            <div class="look-book-info">
+                <div class="look-book-photo">
+                    <a class="fancybox" href="assets/img/portfolio/port06.jpg"><img class="img-responsive"
+                                                                                    src="http://placehold.it/150x230"
+                                                                                    alt="" width="150px" height="230px"></a>
+                </div>
+
+                <div class="look-book-text">
+                    Lorem ipsum dolor sit amet, vidit alienum copiosae usu cu. Per ei dolorum veritus dignissim. Per unum
+                    constituam
+                    ei, nec commodo ancillae constituto an. Sea docendi volutpat democritum ei. Legere aperiri nec te, sea
+                    ex
+                    noluisse singulis accusamus. Eos no lorem labitur, ut aperiri conceptam voluptatum vel.
+                </div>
+            </div>
+
+            <div class="col-button-6">
+                <button type="button" class="btn btn-primary btn-lg btn-block">
+                    Browse the Look Book
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
