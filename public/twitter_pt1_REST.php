@@ -87,7 +87,7 @@ Social
 
            var hash_text =  $("#hash_text").val();
            $.get(
-               "twitter_json.php",
+               "twitter_json_REST.php",
                { hash_text: hash_text },
                function(data) {
                    $('#stage').html(data);
