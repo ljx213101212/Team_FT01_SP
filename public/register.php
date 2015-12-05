@@ -49,12 +49,11 @@
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Collapsible Group Item #1
-                    </a>
+                    Collapsible Group Item #1
                     <a id="custome_accordion_mark" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Plus Marker
+                        Plus
                     </a>
+
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -98,8 +97,9 @@
             <div class="panel-heading" role="tab" id="headingFour">
                 <h4 class="panel-title">
 
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Collapsible Group Item #4
+                    Collapsible Group Item #4
+                    <a id="custome_accordion_mark" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                       Plus
                     </a>
 
                 </h4>
@@ -115,11 +115,41 @@
 </div>
 
 <script>
-    $('#headingTwo').find('a').click(function() {
-        $("#step2").attr('class', 'col-xs-3 bs-wizard-step active');
+
+    $('#headingOne').find('a').click(function() {
+        $("#step1").attr('class', 'col-xs-3 bs-wizard-step active');
+        $("#step2").attr('class', 'col-xs-3 bs-wizard-step disabled');
         $("#step3").attr('class', 'col-xs-3 bs-wizard-step disabled');
+        $("#step4").attr('class', 'col-xs-3 bs-wizard-step disabled');
 
     });
+
+    $('#headingTwo').find('a').click(function() {
+        $("#step1").attr('class', 'col-xs-3 bs-wizard-step complete');
+        $("#step2").attr('class', 'col-xs-3 bs-wizard-step active');
+        $("#step3").attr('class', 'col-xs-3 bs-wizard-step disabled');
+        $("#step4").attr('class', 'col-xs-3 bs-wizard-step disabled');
+
+    });
+
+    $('#headingThree').find('a').click(function() {
+        $("#step1").attr('class', 'col-xs-3 bs-wizard-step complete');
+        $("#step2").attr('class', 'col-xs-3 bs-wizard-step complete');
+        $("#step3").attr('class', 'col-xs-3 bs-wizard-step active');
+        $("#step4").attr('class', 'col-xs-3 bs-wizard-step disabled');
+
+    });
+
+    $('#headingFour').find('a').click(function() {
+        $("#step1").attr('class', 'col-xs-3 bs-wizard-step complete');
+        $("#step2").attr('class', 'col-xs-3 bs-wizard-step complete');
+        $("#step3").attr('class', 'col-xs-3 bs-wizard-step complete');
+        $("#step4").attr('class', 'col-xs-3 bs-wizard-step active');
+
+    });
+
+
+
 
 </script>
 </body>
