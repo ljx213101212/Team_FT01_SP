@@ -13,7 +13,7 @@ $content = $connection->get("account/verify_credentials");
 
 $hash_text;
 $statuses;
-$length_of_tweets = 5;
+$length_of_tweets = 20;
 $result = array();
 
 
@@ -23,7 +23,7 @@ $result = array();
 if (isset ($_GET['hash_text'])){
     $hash_text = $_GET['hash_text'];
     $hash_result = build_multiple_hashtag_search($hash_text);
-    $statuses = $connection->get("search/tweets", array("q" => $hash_result,"until"=>"2015-10-21"));
+    $statuses = $connection->get("search/tweets", array("q" => $hash_result,"until"=>"2015-10-29"));
     $response["success"] = $hash_text;
     build_up_result_array($statuses);
     echo send_array();
